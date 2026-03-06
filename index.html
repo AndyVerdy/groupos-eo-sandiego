@@ -9,16 +9,17 @@
 <meta property="og:image" content="og-image.png">
 <meta property="og:type" content="website">
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+  @font-face{font-family:'Mona Sans';src:url('https://github.githubassets.com/assets/mona-sans-6d09078f662e.woff2') format('woff2');font-weight:200 900;font-stretch:75% 125%;font-display:swap}
   *{margin:0;padding:0;box-sizing:border-box}
   :root{
-    --dk:#1a1a1a;--wh:#ffffff;--ylw:#F5C518;--ylw-bg:rgba(245,197,24,0.12);
+    --dk:#0A0A0A;--wh:#ffffff;--ylw:#EEFF00;--ylw-bg:rgba(238,255,0,0.08);
     --g50:#fafafa;--g100:#f5f5f5;--g200:#e5e5e5;--g300:#d4d4d4;
     --g400:#a3a3a3;--g500:#737373;--g600:#525252;--g700:#404040;
-    --tx:#1a1a1a;--txm:#525252;--txl:#737373;
+    --tx:#0A0A0A;--txm:#525252;--txl:#737373;
     --r:16px;--sh:0 4px 24px rgba(0,0,0,0.08);--shl:0 12px 48px rgba(0,0,0,0.12);
   }
-  body{font-family:'Montserrat',sans-serif;background:#fff;color:var(--tx);overflow:hidden;height:100vh;width:100vw}
+  body{font-family:'Mona Sans','Montserrat',sans-serif;background:#fff;color:var(--tx);overflow:hidden;height:100vh;width:100vw}
 
   /* Slides */
   .slide{display:none;width:100vw;height:100vh;padding:56px 72px;flex-direction:column;justify-content:center;position:relative;overflow:hidden}
@@ -41,10 +42,12 @@
   .wm-logo{height:16px;opacity:.3}
   body.dk .wm-logo{filter:brightness(0) invert(1);opacity:.22}
 
-  /* Type */
-  h1{font-size:64px;font-weight:800;line-height:1.08;letter-spacing:-1.5px}
-  h2{font-size:46px;font-weight:700;line-height:1.1;letter-spacing:-.5px;margin-bottom:12px}
+  /* Type — Lora (thin serif) + Mona Sans (bold sans) mixed in headlines */
+  h1{font-family:'Lora',serif;font-size:64px;font-weight:400;line-height:1.08;letter-spacing:-1.5px}
+  h2{font-family:'Lora',serif;font-size:46px;font-weight:400;line-height:1.12;letter-spacing:-.5px;margin-bottom:12px}
   h3{font-size:22px;font-weight:700;margin-bottom:6px}
+  h1 b,h2 b{font-family:'Mona Sans','Montserrat',sans-serif;font-weight:800;font-style:normal}
+  .cta-c h1{font-family:'Mona Sans','Montserrat',sans-serif;font-weight:800;letter-spacing:-1.5px}
   p{font-size:18px;line-height:1.6;color:var(--txm)}
   .sub{font-size:21px;color:var(--txm);font-weight:400;margin-top:14px;line-height:1.55;max-width:600px}
   .pill{display:inline-block;padding:6px 16px;border-radius:20px;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;background:var(--ylw);color:var(--dk);margin-bottom:14px}
@@ -75,7 +78,7 @@
 
   /* Stats */
   .sts{display:flex;gap:40px;margin-top:24px}
-  .stn{font-size:36px;font-weight:800}
+  .stn{font-family:'Mona Sans','Montserrat',sans-serif;font-size:36px;font-weight:800}
   .stl{font-size:14px;color:var(--txl);margin-top:2px;font-weight:500}
 
   /* Flow */
@@ -152,7 +155,7 @@
     <div>
       <img src="https://www.eonetwork.org/images/eo-logo-color-white.svg?v2" alt="Entrepreneurs' Organization" style="height:48px;margin-bottom:20px;display:block">
       <span class="pill pill-dk">BUILT FOR ORGANIZATIONS LIKE EO</span>
-      <h1 style="color:#fff">Your Chapter.<br>Your App.<br>One Platform.</h1>
+      <h1 style="color:#fff"><b>Your Chapter.</b><br><b>Your App.</b><br>One Platform.</h1>
       <p class="sub">GroupOS is a community management platform purpose-built for chapter-based organizations, professional networks, and membership communities.</p>
       <div class="sts">
         <div><div class="stn" style="color:var(--ylw)">1</div><div class="stl">Single app for everything</div></div>
@@ -169,7 +172,7 @@
 <!-- ====== 2. THE CHALLENGE ====== -->
 <div class="slide s-wh">
   <span class="pill">WE UNDERSTAND EO</span>
-  <h2>Built for How Your Chapter Actually Works</h2>
+  <h2><b>Built for</b> How Your Chapter Actually Works</h2>
   <p style="max-width:680px">EO San Diego has 200+ members, Forum groups, learning events, social programming, and Accelerator cohorts. We know the tools you juggle daily:</p>
   <div class="flow">
     <div class="fl-i">WhatsApp Groups</div><div class="fl-a">+</div>
@@ -203,7 +206,7 @@
   <div class="g2ti">
     <div>
       <span class="pill">EVENTS</span>
-      <h2>Events That Run Themselves</h2>
+      <h2><b>Events</b> That Run Themselves</h2>
       <p style="max-width:460px">From monthly learning events to annual retreats, manage your full event calendar in one place.</p>
       <ul class="ft">
         <li><div class="dt"></div><span><strong>Full event calendar</strong> — Learning events, socials, board meetings, Forum sessions, and retreats</span></li>
@@ -222,7 +225,7 @@
 <!-- ====== 4. EVENT TICKETING ====== -->
 <div class="slide s-wh">
   <span class="pill">TICKETING & PAYMENTS</span>
-  <h2>Flexible Ticketing. Seamless Payments.</h2>
+  <h2><b>Flexible Ticketing.</b> Seamless Payments.</h2>
   <p style="max-width:640px">Multiple ticket types, custom registration forms, and integrated payment processing. Apple Pay and Google Pay built in. Powered by Stripe.</p>
   <div class="ig3">
     <div>
@@ -243,7 +246,7 @@
 <!-- ====== 5. EVENT EXPERIENCE ====== -->
 <div class="slide s-wh">
   <span class="pill">EVENT EXPERIENCE</span>
-  <h2>Every Detail. One Place.</h2>
+  <h2><b>Every Detail.</b> One Place.</h2>
   <p style="max-width:620px">Custom registration forms capture exactly what you need. Multi-room agendas keep attendees on track.</p>
   <div class="ig2">
     <div>
@@ -262,7 +265,7 @@
   <div class="g2ti">
     <div>
       <span class="pill">COMMUNICATION</span>
-      <h2>Replace WhatsApp.<br>Own the Conversation.</h2>
+      <h2><b>Replace WhatsApp.</b><br>Own the Conversation.</h2>
       <p style="max-width:440px">Give your chapter secure, organized communication without the noise of consumer messaging apps.</p>
       <ul class="ft">
         <li><div class="dt"></div><span><strong>Channels per Forum group</strong> — Each Forum gets its own private space</span></li>
@@ -283,7 +286,7 @@
   <div class="g2ti">
     <div>
       <span class="pill">MESSAGING</span>
-      <h2>Private Conversations.<br>Built In.</h2>
+      <h2><b>Private Conversations.</b><br>Built In.</h2>
       <p style="max-width:440px">1:1 direct messaging and ad-hoc group conversations without leaving the app. No more switching to WhatsApp or text.</p>
       <ul class="ft">
         <li><div class="dt"></div><span><strong>Direct messages</strong> — 1:1 conversations between any members</span></li>
@@ -303,7 +306,7 @@
   <div class="g2ti">
     <div>
       <span class="pill">CONTENT</span>
-      <h2>Video Library &<br>Document Hub</h2>
+      <h2><b>Video Library</b> &<br>Document Hub</h2>
       <p style="max-width:440px">Capture and share your chapter's knowledge. Speaker recordings, workshop materials, and member resources in one searchable library.</p>
       <ul class="ft">
         <li><div class="dt"></div><span><strong>On-demand video</strong> — Upload, organize, and share video content. Offline downloads and background playback.</span></li>
@@ -323,7 +326,7 @@
   <div class="g2ti">
     <div>
       <span class="pill">DOCUMENTS</span>
-      <h2>Organize Every File<br>in One Place</h2>
+      <h2><b>Organize Every File</b><br>in One Place</h2>
       <p style="max-width:440px">PDFs, presentations, guides, and SOPs — all searchable, filterable, and access-controlled. Desktop and mobile.</p>
       <ul class="ft">
         <li><div class="dt"></div><span><strong>Document library</strong> — Upload and organize files by category, type, and date</span></li>
@@ -341,7 +344,7 @@
 <!-- ====== 10. MONETIZATION & ACCESS ====== -->
 <div class="slide s-wh">
   <span class="pill">MONETIZATION & ACCESS CONTROL</span>
-  <h2>Monetize Content. Control Access.</h2>
+  <h2><b>Monetize Content.</b> Control Access.</h2>
   <p style="max-width:640px">Sponsored video placements for partners. Granular access rules let you control exactly who sees what — by user, group, plan, or tags.</p>
   <div class="ig2">
     <div>
@@ -360,7 +363,7 @@
   <div class="g2ti">
     <div>
       <span class="pill">EXHIBITORS & PARTNERS</span>
-      <h2>Exhibitors<br>& Partners</h2>
+      <h2><b>Exhibitors</b><br>& Partners</h2>
       <p style="max-width:440px">Give sponsors and exhibitors maximum visibility with dedicated profiles, sponsored placements, and real-time analytics.</p>
       <ul class="ft">
         <li><div class="dt"></div><span><strong>Custom partner profiles</strong> — Dedicated space for brand, offers, contact details, and service showcases</span></li>
@@ -378,7 +381,7 @@
 <!-- ====== 10b. EXHIBITORS & PARTNERS (cont.) ====== -->
 <div class="slide s-wh">
   <span class="pill">EXHIBITORS & PARTNERS</span>
-  <h2>Partner Visibility & Revenue</h2>
+  <h2><b>Partner Visibility</b> & Revenue</h2>
   <p style="max-width:640px">Sponsor videos, exhibitor profiles, and custom badges — three ways to give partners visibility and generate revenue.</p>
   <div class="ig3">
     <div>
@@ -399,7 +402,7 @@
 <!-- ====== 11. NOTIFICATIONS ====== -->
 <div class="slide s-wh">
   <span class="pill">ENGAGEMENT CHANNEL</span>
-  <h2>Push Notifications That Get Seen</h2>
+  <h2><b>Push Notifications</b> That Get Seen</h2>
   <p style="max-width:640px">Email open rates average 20%. Push notifications hit 70%+. Reach your members where they actually look — their phone. In-app feed, email digests, and lock-screen push notifications.</p>
   <div class="ph-row">
     <img src="https://cdn.prod.website-files.com/673e4117f87b553a20b29eca/67a655f35cb92211f7fe3b2c_img-notifications-in-app.webp" alt="In-app notifications" class="ph-img">
@@ -413,7 +416,7 @@
   <div class="g2ti">
     <div>
       <span class="pill">MEMBERSHIP</span>
-      <h2>Granular Control for<br>Every Member Type</h2>
+      <h2><b>Granular Control</b> for<br>Every Member Type</h2>
       <p style="max-width:440px">EO has multiple membership types and programs. GroupOS lets you create distinct experiences for each one.</p>
       <ul class="ft">
         <li><div class="dt"></div><span><strong>Full Members</strong> — Complete access to all events, channels, video library, and partners</span></li>
@@ -433,7 +436,7 @@
   <div class="g2ti">
     <div>
       <span class="pill">MEMBER DIRECTORY & MAP</span>
-      <h2>Member Directory<br>& Map</h2>
+      <h2><b>Member Directory</b><br>& Map</h2>
       <p style="max-width:440px">Searchable member profiles with industry tags, locations, and direct in-app messaging. Members Map shows who's where globally.</p>
       <ul class="ft">
         <li><div class="dt"></div><span><strong>Members Map</strong> — See who's where globally with interactive location clusters</span></li>
@@ -453,7 +456,7 @@
   <div class="g2">
     <div>
       <span class="pill">WHITE-LABEL</span>
-      <h2>Your Brand.<br>Your App.</h2>
+      <h2><b>Your Brand.</b><br>Your App.</h2>
       <p style="max-width:440px">GroupOS is fully white-labeled. EO San Diego members see your brand, your colors, and your name — not ours.</p>
       <ul class="ft">
         <li><div class="dt"></div><span><strong>Custom app name</strong> in the App Store and Google Play</span></li>
@@ -473,7 +476,7 @@
 <!-- ====== 15. TIMELINE ====== -->
 <div class="slide s-wh">
   <span class="pill">GETTING STARTED</span>
-  <h2>Launch in Weeks, Not Months</h2>
+  <h2><b>Launch in Weeks,</b> Not Months</h2>
   <p style="max-width:600px">We handle setup and configuration. Your chapter admin just provides the content.</p>
   <div class="tl">
     <div class="tl-i">
