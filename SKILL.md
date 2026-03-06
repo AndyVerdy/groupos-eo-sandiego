@@ -75,8 +75,8 @@ Create a brief with:
 | 18 | **CTA** | Dark | Org logo + closing headline |
 
 ### Slide Types
-- **Dark slides** (`s-dk`): Only cover and CTA. Dark background (#1a1a1a), white text, yellow accents.
-- **White slides** (`s-wh`): Everything else. White background, dark text, yellow accents.
+- **Dark slides** (`s-dk`): Only cover and CTA. Dark background (#0A0A0A), white text, neon lime accents.
+- **White slides** (`s-wh`): Everything else. White background, dark text, neon lime accents.
 
 ### Not Every Org Needs Every Slide
 - Skip **Exhibitors & Partners** if the org doesn't have sponsors
@@ -311,8 +311,8 @@ groupos-[org-slug]/
 
 ### Design
 - Cover and CTA are dark slides, everything else is white
-- Yellow accent (#F5C518) used consistently
-- Montserrat font loads correctly
+- Neon lime accent (#EEFF00) used consistently
+- Lora + Mona Sans fonts load correctly
 - All images load (no broken images)
 - Images don't stretch (object-fit:contain)
 - GroupOS watermark visible on all slides (bottom-left)
@@ -335,7 +335,7 @@ groupos-[org-slug]/
 2. **NEVER use generic copy** — Every deck must feel custom-built for the specific organization.
 3. **ALWAYS research first** — Understand the org's structure, programs, and pain points before writing.
 4. **Single file only** — All HTML, CSS, JS in `index.html`. No frameworks.
-5. **Yellow accent only** — #F5C518 is the GroupOS brand color. Don't change it.
+5. **Neon lime accent only** — #EEFF00 is the GroupOS brand color. Don't change it.
 6. **Client brand on cover + CTA** — Their logo appears on first and last slides.
 7. **GroupOS watermark on every slide** — Small, subtle, bottom-left.
 8. **Verify images load** — Test all CDN URLs before deploying.

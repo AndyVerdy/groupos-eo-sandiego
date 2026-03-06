@@ -70,8 +70,8 @@ Create a brief with:
 | 18 | **CTA** | Dark | Org logo + closing headline |
 
 ### Slide Types
-- **Dark slides** (`s-dk`): Only cover and CTA. Dark background (#1a1a1a), white text, yellow accents.
-- **White slides** (`s-wh`): Everything else. White background, dark text, yellow accents.
+- **Dark slides** (`s-dk`): Only cover and CTA. Dark background (#0A0A0A), white text, neon lime accents.
+- **White slides** (`s-wh`): Everything else. White background, dark text, neon lime accents.
 
 ### Not Every Org Needs Every Slide
 - Skip **Exhibitors & Partners** if the org doesn't have sponsors
@@ -86,24 +86,46 @@ Create a brief with:
 ### Colors
 ```css
 :root{
-  --dk:#1a1a1a;          /* Dark backgrounds */
+  --dk:#0A0A0A;          /* Dark backgrounds (near-black, matches groupos.com) */
   --wh:#ffffff;           /* White backgrounds */
-  --ylw:#F5C518;          /* Yellow accent — GroupOS brand */
-  --ylw-bg:rgba(245,197,24,0.12); /* Yellow tint for backgrounds */
+  --ylw:#EEFF00;          /* Neon lime accent — GroupOS brand */
+  --ylw-bg:rgba(238,255,0,0.08); /* Lime tint for backgrounds */
   --g50:#fafafa;          /* Subtle backgrounds */
   --g100:#f5f5f5;
   --g200:#e5e5e5;         /* Borders, dividers */
-  --tx:#1a1a1a;           /* Primary text */
+  --tx:#0A0A0A;           /* Primary text */
   --txm:#525252;          /* Secondary text */
   --txl:#737373;          /* Light/caption text */
 }
 ```
 
-### Font
-**Montserrat** from Google Fonts. Weights: 300-900. Import:
+### Fonts — Lora + Mona Sans (smart combination)
+Two fonts mixed within the same headlines for visual contrast:
+- **Lora** (serif, weight 400) — thin, elegant. Used as the base font for H1 and H2.
+- **Mona Sans** (sans-serif, weight 800) — bold, punchy. Used for emphasis words within headlines, and for all body/UI text.
+
+**Key rule: Lora is NEVER bold. Bold = Mona Sans.**
+
 ```css
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+@font-face{font-family:'Mona Sans';src:url('https://github.githubassets.com/assets/mona-sans-6d09078f662e.woff2') format('woff2');font-weight:200 900;font-stretch:75% 125%;font-display:swap}
 ```
+
+### Headline Pattern — Mixed Fonts in Same Line
+Use `<b>` tags inside headings to switch from thin Lora to bold Mona Sans:
+```css
+h1{font-family:'Lora',serif;font-weight:400}
+h2{font-family:'Lora',serif;font-weight:400}
+h1 b, h2 b{font-family:'Mona Sans',sans-serif;font-weight:800}
+```
+
+Examples:
+```html
+<h2><b>Events</b> That Run Themselves</h2>
+<h2><b>Replace WhatsApp.</b><br>Own the Conversation.</h2>
+```
+
+The bold sans-serif carries the action/punch. The thin serif carries the context/flow.
 
 ### Font Sizes
 - H1: 64px (cover), 56px (CTA)
@@ -295,8 +317,8 @@ Before sharing the deck:
 
 ### Design
 - [ ] Cover and CTA are dark slides, everything else is white
-- [ ] Yellow accent (#F5C518) used consistently
-- [ ] Montserrat font loads correctly
+- [ ] Neon lime accent (#EEFF00) used consistently
+- [ ] Lora + Mona Sans fonts load correctly
 - [ ] All images load (no broken images)
 - [ ] Images don't stretch (object-fit:contain)
 - [ ] GroupOS watermark visible on all slides (bottom-left)
@@ -327,7 +349,7 @@ Before sharing the deck:
 2. **NEVER use generic copy** — Every deck must feel custom-built for the specific organization.
 3. **ALWAYS research first** — Understand the org's structure, programs, and pain points before writing.
 4. **Single file only** — All HTML, CSS, JS in `index.html`. No frameworks.
-5. **Yellow accent only** — #F5C518 is the GroupOS brand color. Don't change it.
+5. **Neon lime accent only** — #EEFF00 is the GroupOS brand color. Don't change it.
 6. **Client brand on cover + CTA** — Their logo appears on first and last slides.
 7. **GroupOS watermark on every slide** — Small, subtle, bottom-left.
 8. **Verify images load** — Test all CDN URLs before deploying. CDN URLs can change.
